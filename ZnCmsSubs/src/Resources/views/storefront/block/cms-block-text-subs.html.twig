@@ -1,0 +1,19 @@
+{% block sw_cms_block_text %}
+    {% set subs = block.slots.getSlot('subs') %}
+    {% set list = subs.config.content.value|trim %}
+    {% if list is not empty and list|striptags|length > 0 %}
+        <div class="outersub-wrapped not-overflow">
+            <div class="innersub-overflow">
+            {% for item in list|split('</a>') %}
+                {% set item = item|replace({'<div>': ''})|replace({'</div>': ''})|replace({'<p>': ''})|replace({'</p>': ''})|replace({'<br>': ''}) %}
+                {% if item is not empty %}
+                    {% set item = item ~ '</a>' %}
+                    {% if 'href' in item %}
+                        {{ item|raw }}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

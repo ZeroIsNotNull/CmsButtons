@@ -1,0 +1,28 @@
+{
+  "name": "zn/cms-subs",
+  "description": "CMS-Subs",
+  "version": "1.0.0",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nima Sorouri"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Zn\\CmsSubs\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "Zn\\CmsSubs\\ZnCmsSubs",
+    "label": {
+      "de-DE": "CMS-Subs",
+      "en-GB": "CMS Subs"
+    },
+    "description": {
+      "de-DE": "Einfügen von Link-Elementen",
+      "en-GB": ""
+    }
+  }
+}

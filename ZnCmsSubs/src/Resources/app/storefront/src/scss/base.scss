@@ -1,0 +1,25 @@
+.outersub-wrapped {
+    width: 100%;
+    overflow: hidden;
+    .innersub-overflow {
+        display: flex;
+        overflow-x: scroll;
+        padding:10px 0;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        a {
+            color:white;
+            font-weight: 700;
+            padding: 10px;
+            background: black;
+            margin-right: 10px;
+            flex-shrink: 0;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
